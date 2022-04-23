@@ -20,8 +20,8 @@ class Book(models.Model):
     locations = models.ManyToManyField(
         Location, blank=True, related_name="books_set_here")
 
-    # creator = models.ForeignKey(
-    #     User, related_name="books", null=True, on_delete=models.CASCADE)
+    creator = models.ForeignKey(
+        User, related_name="books", null=True, on_delete=models.CASCADE)
 
     def __str__(self) -> str:
         return f"{self.title}"
