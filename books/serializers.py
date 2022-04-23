@@ -31,18 +31,18 @@ class BookSerializer(serializers.ModelSerializer):
         location_data = data.pop("locations")
 
         book = Book(**data)
+        # Need to save to get the id
+        book.save()
 
         if author_data:
             author, _created = Author.objects.get_or_create(**author_data)
             book.author = author
 
         if location_data:
-            locations = []
             for location in location_data:
                 newLocation, _created = Location.objects.get_or_create(
                     **location)
-                locations.append(newLocation)
-            book.set(locations)
-
+                book.locations.add(newLocation)
+        # need to save to finish it off
         book.save()
         return book
