@@ -49,3 +49,28 @@ class BookSerializer(serializers.ModelSerializer):
 
         # render to the api
         return book
+
+    def update(self, book, data):
+        author_data = data.pop("author")
+        location_data = data.pop("locations")
+
+        book.title = data.get("title", book.title)
+        book.rating = data.get("rating", book.rating)
+        book.year_of_publication = data.get(
+            "year_of_publication", book.year_of_publication)
+
+        if author_data:
+            author, _created = Author.objects.get_or_create(**author_data)
+            book.author = author
+
+        if location_data:
+            for location in location_data:
+                newLocation, _created = Location.objects.get_or_create(
+                    **location)
+                book.locations.add(newLocation)
+
+        # save to the database
+        book.save()
+
+        # render to the api
+        return book
