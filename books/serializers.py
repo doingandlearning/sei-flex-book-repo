@@ -23,7 +23,7 @@ class BookSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Book
-        fields = ("title", "year_of_publication",
+        fields = ("id", "title", "year_of_publication",
                   "rating", "locations", "author")
 
     def create(self, data):
@@ -43,6 +43,9 @@ class BookSerializer(serializers.ModelSerializer):
                 newLocation, _created = Location.objects.get_or_create(
                     **location)
                 book.locations.add(newLocation)
-        # need to save to finish it off
+
+        # save to the database
         book.save()
+
+        # render to the api
         return book
