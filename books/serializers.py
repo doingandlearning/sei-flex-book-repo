@@ -36,13 +36,13 @@ class BookSerializer(serializers.ModelSerializer):
             author, _created = Author.objects.get_or_create(**author_data)
             book.author = author
 
-        if location_data:
-            locations = []
-            for location in location_data:
-                newLocation, _created = Location.objects.get_or_create(
-                    **location)
-                locations.append(newLocation)
-            book.locations = locations
+        # if location_data:
+        #     locations = []
+        #     for location in location_data:
+        #         newLocation, _created = Location.objects.get_or_create(
+        #             **location)
+        #         locations.append(newLocation)
+        #     book.locations = locations
 
         book.save()
         return book
