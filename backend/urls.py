@@ -21,5 +21,5 @@ urlpatterns = [
     path('books/', include("books.urls")),
     path('authors/', include("authors.urls")),
     path('api-auth/', include("rest_framework.urls")),
-    path('dj-rest-auth/', include('dj_rest_auth.urls')),
+    # path('dj-rest-auth/', include('dj_rest_auth.urls')),
 ]
