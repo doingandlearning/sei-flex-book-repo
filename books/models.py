@@ -1,6 +1,6 @@
 from django.db import models
-from rest_framework import generics
-from django.contrib.auth import get_user_model
+
+from django.contrib.auth.models import User
 
 from authors.models import Author
 from locations.models import Location
@@ -19,6 +19,9 @@ class Book(models.Model):
 
     locations = models.ManyToManyField(
         Location, blank=True, related_name="books_set_here")
+
+    # creator = models.ForeignKey(
+    #     User, related_name="books", null=True, on_delete=models.CASCADE)
 
     def __str__(self) -> str:
         return f"{self.title}"
