@@ -1,4 +1,5 @@
 from rest_framework import serializers
+from django.contrib.auth.models import User
 from authors.models import Author
 
 from books.models import Book
@@ -35,6 +36,9 @@ class BookSerializer(serializers.ModelSerializer):
         if author_data:
             author, _created = Author.objects.get_or_create(**author_data)
             book.author = author
+
+        request = self.context.get("request")
+        book.creator = request.user
 
         # Need to save to get the id
         book.save()
