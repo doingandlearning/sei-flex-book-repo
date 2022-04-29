@@ -37,8 +37,10 @@ class BookSerializer(serializers.ModelSerializer):
             author, _created = Author.objects.get_or_create(**author_data)
             book.author = author
 
+        # set the creator of a book to be the currently logged-in user
         request = self.context.get("request")
-        book.creator = request.user
+        if request and hasattr(request, "user"):
+            book.creator = request.user
 
         # Need to save to get the id
         book.save()
