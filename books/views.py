@@ -3,7 +3,7 @@ from django.shortcuts import render
 from rest_framework import generics
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from backend.permissions import IsAuthorOrReadOnly
+from backend.permissions import IsAuthor, IsAuthorOrReadOnly, IsPutOrGetMethod, IsSafeMethod
 from rest_framework.permissions import IsAuthenticated
 
 from books.models import Book
@@ -17,6 +17,6 @@ class BookListView(generics.ListCreateAPIView):
 
 
 class BookDetailView(generics.RetrieveUpdateDestroyAPIView):
-    permission_classes = (IsAuthorOrReadOnly,)
+    permission_classes = [IsSafeMethod | IsAuthor]
     queryset = Book.objects.all()
     serializer_class = BookSerializer
