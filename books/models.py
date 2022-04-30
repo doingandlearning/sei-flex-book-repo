@@ -4,7 +4,6 @@ from django.contrib.auth.models import User
 
 from authors.models import Author
 from locations.models import Location
-# Create your models here.
 
 
 class Book(models.Model):
@@ -13,12 +12,14 @@ class Book(models.Model):
         null=True, blank=True)  # default or null
 
     rating = models.IntegerField()
+    created_at = models.DateTimeField(auto_now_add=True, null=True)
+    updated_at = models.DateTimeField(auto_now=True, null=True)
 
     author = models.ForeignKey(
         Author, null=True, blank=True, on_delete=models.CASCADE, related_name="books")
 
     locations = models.ManyToManyField(
-        Location, blank=True, related_name="books_set_here")
+        Location, blank=True, related_name="books")
 
     creator = models.ForeignKey(
         User, related_name="books", null=True, on_delete=models.CASCADE)

@@ -1,0 +1,142 @@
+[
+  {
+    "model": "books.book",
+    "pk": 1,
+    "fields": {
+      "title": "The Alchemist",
+      "year_of_publication": 1988,
+      "rating": 4,
+      "created_at": "2022-04-30T08:03:56.902Z",
+      "updated_at": "2022-04-30T08:03:56.907Z",
+      "author": 1,
+      "creator": 2,
+      "locations": [1]
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 2,
+    "fields": {
+      "title": "Harry Potter",
+      "year_of_publication": 1997,
+      "rating": 2,
+      "created_at": "2022-04-30T08:03:56.902Z",
+      "updated_at": "2022-04-30T08:03:56.907Z",
+      "author": 2,
+      "creator": null,
+      "locations": [2]
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 3,
+    "fields": {
+      "title": "Harry Potter 2",
+      "year_of_publication": 1998,
+      "rating": 3,
+      "created_at": "2022-04-30T08:03:56.902Z",
+      "updated_at": "2022-04-30T08:03:56.907Z",
+      "author": 2,
+      "creator": null,
+      "locations": [2]
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 4,
+    "fields": {
+      "title": "Harry Potter 3",
+      "year_of_publication": 1999,
+      "rating": 4,
+      "created_at": "2022-04-30T08:03:56.902Z",
+      "updated_at": "2022-04-30T08:03:56.907Z",
+      "author": 2,
+      "creator": null,
+      "locations": [2]
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 5,
+    "fields": {
+      "title": "The Alchemist",
+      "year_of_publication": 1988,
+      "rating": 4,
+      "created_at": "2022-04-30T08:03:56.902Z",
+      "updated_at": "2022-04-30T08:03:56.907Z",
+      "author": 1,
+      "creator": null,
+      "locations": [1]
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 6,
+    "fields": {
+      "title": "My new book",
+      "year_of_publication": 1988,
+      "rating": 4,
+      "created_at": "2022-04-30T08:03:56.902Z",
+      "updated_at": "2022-04-30T08:03:56.907Z",
+      "author": 1,
+      "creator": null,
+      "locations": [1]
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 7,
+    "fields": {
+      "title": "My newest book",
+      "year_of_publication": 1988,
+      "rating": 4,
+      "created_at": "2022-04-30T08:03:56.902Z",
+      "updated_at": "2022-04-30T08:03:56.907Z",
+      "author": 1,
+      "creator": null,
+      "locations": [1]
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 8,
+    "fields": {
+      "title": "Again new",
+      "year_of_publication": 1988,
+      "rating": 5,
+      "created_at": "2022-04-30T08:03:56.902Z",
+      "updated_at": "2022-04-30T08:03:56.907Z",
+      "author": 4,
+      "creator": 6,
+      "locations": [1]
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 9,
+    "fields": {
+      "title": "Something else",
+      "year_of_publication": 1988,
+      "rating": 5,
+      "created_at": "2022-04-30T08:03:56.902Z",
+      "updated_at": "2022-04-30T08:03:56.907Z",
+      "author": 3,
+      "creator": 6,
+      "locations": [1]
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 10,
+    "fields": {
+      "title": "Best book ever",
+      "year_of_publication": 2022,
+      "rating": 5,
+      "created_at": "2022-04-30T08:14:04.189Z",
+      "updated_at": "2022-04-30T08:14:04.190Z",
+      "author": 5,
+      "creator": 2,
+      "locations": [3]
+    }
+  }
+]
