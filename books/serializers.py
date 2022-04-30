@@ -24,8 +24,7 @@ class BookSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Book
-        fields = ("id", "title", "year_of_publication",
-                  "rating", "locations", "author")
+        fields = "__all__"
 
     def create(self, data):
         author_data = data.pop("author")

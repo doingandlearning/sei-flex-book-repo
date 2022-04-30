@@ -1,142 +1,365 @@
 [
-  {
-    "model": "books.book",
-    "pk": 1,
-    "fields": {
-      "title": "The Alchemist",
-      "year_of_publication": 1988,
-      "rating": 4,
-      "created_at": "2022-04-30T08:03:56.902Z",
-      "updated_at": "2022-04-30T08:03:56.907Z",
-      "author": 1,
-      "creator": 2,
-      "locations": [1]
-    }
-  },
-  {
-    "model": "books.book",
-    "pk": 2,
-    "fields": {
-      "title": "Harry Potter",
-      "year_of_publication": 1997,
-      "rating": 2,
-      "created_at": "2022-04-30T08:03:56.902Z",
-      "updated_at": "2022-04-30T08:03:56.907Z",
-      "author": 2,
-      "creator": null,
-      "locations": [2]
-    }
-  },
-  {
-    "model": "books.book",
-    "pk": 3,
-    "fields": {
-      "title": "Harry Potter 2",
-      "year_of_publication": 1998,
-      "rating": 3,
-      "created_at": "2022-04-30T08:03:56.902Z",
-      "updated_at": "2022-04-30T08:03:56.907Z",
-      "author": 2,
-      "creator": null,
-      "locations": [2]
-    }
-  },
-  {
-    "model": "books.book",
-    "pk": 4,
-    "fields": {
-      "title": "Harry Potter 3",
-      "year_of_publication": 1999,
-      "rating": 4,
-      "created_at": "2022-04-30T08:03:56.902Z",
-      "updated_at": "2022-04-30T08:03:56.907Z",
-      "author": 2,
-      "creator": null,
-      "locations": [2]
-    }
-  },
-  {
-    "model": "books.book",
-    "pk": 5,
-    "fields": {
-      "title": "The Alchemist",
-      "year_of_publication": 1988,
-      "rating": 4,
-      "created_at": "2022-04-30T08:03:56.902Z",
-      "updated_at": "2022-04-30T08:03:56.907Z",
-      "author": 1,
-      "creator": null,
-      "locations": [1]
-    }
-  },
-  {
-    "model": "books.book",
-    "pk": 6,
-    "fields": {
-      "title": "My new book",
-      "year_of_publication": 1988,
-      "rating": 4,
-      "created_at": "2022-04-30T08:03:56.902Z",
-      "updated_at": "2022-04-30T08:03:56.907Z",
-      "author": 1,
-      "creator": null,
-      "locations": [1]
-    }
-  },
-  {
-    "model": "books.book",
-    "pk": 7,
-    "fields": {
-      "title": "My newest book",
-      "year_of_publication": 1988,
-      "rating": 4,
-      "created_at": "2022-04-30T08:03:56.902Z",
-      "updated_at": "2022-04-30T08:03:56.907Z",
-      "author": 1,
-      "creator": null,
-      "locations": [1]
-    }
-  },
-  {
-    "model": "books.book",
-    "pk": 8,
-    "fields": {
-      "title": "Again new",
-      "year_of_publication": 1988,
-      "rating": 5,
-      "created_at": "2022-04-30T08:03:56.902Z",
-      "updated_at": "2022-04-30T08:03:56.907Z",
-      "author": 4,
-      "creator": 6,
-      "locations": [1]
-    }
-  },
-  {
-    "model": "books.book",
-    "pk": 9,
-    "fields": {
-      "title": "Something else",
-      "year_of_publication": 1988,
-      "rating": 5,
-      "created_at": "2022-04-30T08:03:56.902Z",
-      "updated_at": "2022-04-30T08:03:56.907Z",
-      "author": 3,
-      "creator": 6,
-      "locations": [1]
-    }
-  },
-  {
-    "model": "books.book",
-    "pk": 10,
-    "fields": {
-      "title": "Best book ever",
-      "year_of_publication": 2022,
-      "rating": 5,
-      "created_at": "2022-04-30T08:14:04.189Z",
-      "updated_at": "2022-04-30T08:14:04.190Z",
-      "author": 5,
-      "creator": 2,
-      "locations": [3]
-    }
+{
+  "model": "books.book",
+  "pk": 1,
+  "fields": {
+    "title": "The Alchemist",
+    "year_of_publication": 1988,
+    "language": "en",
+    "genre": "Action",
+    "rating": 4,
+    "created_at": "2022-04-30T08:03:56.902Z",
+    "updated_at": "2022-04-30T08:03:56.907Z",
+    "author": 1,
+    "creator": 2,
+    "locations": [
+      1
+    ]
   }
+},
+{
+  "model": "books.book",
+  "pk": 2,
+  "fields": {
+    "title": "Harry Potter",
+    "year_of_publication": 1997,
+    "language": "en",
+    "genre": "Action",
+    "rating": 2,
+    "created_at": "2022-04-30T08:03:56.902Z",
+    "updated_at": "2022-04-30T08:03:56.907Z",
+    "author": 2,
+    "creator": null,
+    "locations": [
+      2
+    ]
+  }
+},
+{
+  "model": "books.book",
+  "pk": 3,
+  "fields": {
+    "title": "Yet another changed title",
+    "year_of_publication": 1998,
+    "language": "en",
+    "genre": "Action",
+    "rating": 5,
+    "created_at": "2022-04-30T08:03:56.902Z",
+    "updated_at": "2022-04-30T09:59:31.290Z",
+    "author": 4,
+    "creator": null,
+    "locations": [
+      2,
+      4
+    ]
+  }
+},
+{
+  "model": "books.book",
+  "pk": 4,
+  "fields": {
+    "title": "Harry Potter 3",
+    "year_of_publication": 1999,
+    "language": "en",
+    "genre": "Action",
+    "rating": 4,
+    "created_at": "2022-04-30T08:03:56.902Z",
+    "updated_at": "2022-04-30T08:03:56.907Z",
+    "author": 2,
+    "creator": null,
+    "locations": [
+      2
+    ]
+  }
+},
+{
+  "model": "books.book",
+  "pk": 5,
+  "fields": {
+    "title": "The Alchemist",
+    "year_of_publication": 1988,
+    "language": "en",
+    "genre": "Action",
+    "rating": 4,
+    "created_at": "2022-04-30T08:03:56.902Z",
+    "updated_at": "2022-04-30T08:03:56.907Z",
+    "author": 1,
+    "creator": null,
+    "locations": [
+      1
+    ]
+  }
+},
+{
+  "model": "books.book",
+  "pk": 6,
+  "fields": {
+    "title": "My new book",
+    "year_of_publication": 1988,
+    "language": "en",
+    "genre": "Action",
+    "rating": 4,
+    "created_at": "2022-04-30T08:03:56.902Z",
+    "updated_at": "2022-04-30T08:03:56.907Z",
+    "author": 1,
+    "creator": null,
+    "locations": [
+      1
+    ]
+  }
+},
+{
+  "model": "books.book",
+  "pk": 7,
+  "fields": {
+    "title": "My newest book",
+    "year_of_publication": 1988,
+    "language": "en",
+    "genre": "Action",
+    "rating": 4,
+    "created_at": "2022-04-30T08:03:56.902Z",
+    "updated_at": "2022-04-30T08:03:56.907Z",
+    "author": 1,
+    "creator": null,
+    "locations": [
+      1
+    ]
+  }
+},
+{
+  "model": "books.book",
+  "pk": 8,
+  "fields": {
+    "title": "Again new",
+    "year_of_publication": 1988,
+    "language": "en",
+    "genre": "Action",
+    "rating": 5,
+    "created_at": "2022-04-30T08:03:56.902Z",
+    "updated_at": "2022-04-30T08:03:56.907Z",
+    "author": 4,
+    "creator": 6,
+    "locations": [
+      1
+    ]
+  }
+},
+{
+  "model": "books.book",
+  "pk": 9,
+  "fields": {
+    "title": "Yet another changed title",
+    "year_of_publication": 1988,
+    "language": "en",
+    "genre": "Action",
+    "rating": 5,
+    "created_at": "2022-04-30T08:03:56.902Z",
+    "updated_at": "2022-04-30T09:52:59.219Z",
+    "author": 4,
+    "creator": 6,
+    "locations": [
+      1,
+      4
+    ]
+  }
+},
+{
+  "model": "books.book",
+  "pk": 10,
+  "fields": {
+    "title": "Best book ever",
+    "year_of_publication": 2022,
+    "language": "en",
+    "genre": "Action",
+    "rating": 5,
+    "created_at": "2022-04-30T08:14:04.189Z",
+    "updated_at": "2022-04-30T08:14:04.190Z",
+    "author": 5,
+    "creator": 2,
+    "locations": [
+      3
+    ]
+  }
+},
+{
+  "model": "books.book",
+  "pk": 11,
+  "fields": {
+    "title": "New book",
+    "year_of_publication": 2022,
+    "language": "en",
+    "genre": "Action",
+    "rating": 5,
+    "created_at": "2022-04-30T09:28:33.361Z",
+    "updated_at": "2022-04-30T09:28:33.361Z",
+    "author": 5,
+    "creator": 2,
+    "locations": [
+      3
+    ]
+  }
+},
+{
+  "model": "books.book",
+  "pk": 12,
+  "fields": {
+    "title": "New book",
+    "year_of_publication": 2022,
+    "language": "en",
+    "genre": "Action",
+    "rating": 5,
+    "created_at": "2022-04-30T09:29:18.891Z",
+    "updated_at": "2022-04-30T09:29:18.891Z",
+    "author": 5,
+    "creator": 2,
+    "locations": [
+      3
+    ]
+  }
+},
+{
+  "model": "books.book",
+  "pk": 13,
+  "fields": {
+    "title": "Yet another changed title",
+    "year_of_publication": 2022,
+    "language": "en",
+    "genre": "Action",
+    "rating": 5,
+    "created_at": "2022-04-30T09:30:17.615Z",
+    "updated_at": "2022-04-30T09:32:24.045Z",
+    "author": 4,
+    "creator": 2,
+    "locations": [
+      3,
+      4
+    ]
+  }
+},
+{
+  "model": "books.book",
+  "pk": 14,
+  "fields": {
+    "title": "New book",
+    "year_of_publication": 2022,
+    "language": "en",
+    "genre": "Action",
+    "rating": 5,
+    "created_at": "2022-04-30T11:02:56.646Z",
+    "updated_at": "2022-04-30T11:02:56.646Z",
+    "author": 5,
+    "creator": 2,
+    "locations": [
+      3
+    ]
+  }
+},
+{
+  "model": "books.book",
+  "pk": 15,
+  "fields": {
+    "title": "New book",
+    "year_of_publication": 2022,
+    "language": "en",
+    "genre": "Action",
+    "rating": 5,
+    "created_at": "2022-04-30T11:03:40.151Z",
+    "updated_at": "2022-04-30T11:03:40.151Z",
+    "author": 5,
+    "creator": 2,
+    "locations": [
+      3
+    ]
+  }
+},
+{
+  "model": "books.book",
+  "pk": 16,
+  "fields": {
+    "title": "New book",
+    "year_of_publication": 2022,
+    "language": "en",
+    "genre": "Action",
+    "rating": 5,
+    "created_at": "2022-04-30T11:06:44.443Z",
+    "updated_at": "2022-04-30T11:06:44.443Z",
+    "author": 5,
+    "creator": 2,
+    "locations": [
+      3
+    ]
+  }
+},
+{
+  "model": "books.book",
+  "pk": 17,
+  "fields": {
+    "title": "New book",
+    "year_of_publication": 2022,
+    "language": "en",
+    "genre": "Action",
+    "rating": 5,
+    "created_at": "2022-04-30T11:07:51.525Z",
+    "updated_at": "2022-04-30T11:07:51.525Z",
+    "author": 5,
+    "creator": 2,
+    "locations": [
+      3
+    ]
+  }
+},
+{
+  "model": "books.book",
+  "pk": 18,
+  "fields": {
+    "title": "New book",
+    "year_of_publication": 2022,
+    "language": "en",
+    "genre": "Classics",
+    "rating": 5,
+    "created_at": "2022-04-30T11:12:01.375Z",
+    "updated_at": "2022-04-30T11:12:01.375Z",
+    "author": 5,
+    "creator": 2,
+    "locations": [
+      3
+    ]
+  }
+},
+{
+  "model": "books.book",
+  "pk": 19,
+  "fields": {
+    "title": "New book",
+    "year_of_publication": 2022,
+    "language": "en",
+    "genre": "Classics",
+    "rating": 5,
+    "created_at": "2022-04-30T11:13:47.292Z",
+    "updated_at": "2022-04-30T11:13:47.292Z",
+    "author": 5,
+    "creator": 2,
+    "locations": [
+      3
+    ]
+  }
+},
+{
+  "model": "books.book",
+  "pk": 20,
+  "fields": {
+    "title": "My newest book",
+    "year_of_publication": 2022,
+    "language": "de",
+    "genre": "Classics",
+    "rating": 5,
+    "created_at": "2022-04-30T11:57:20.197Z",
+    "updated_at": "2022-04-30T11:57:20.197Z",
+    "author": 5,
+    "creator": 2,
+    "locations": [
+      3
+    ]
+  }
+}
 ]

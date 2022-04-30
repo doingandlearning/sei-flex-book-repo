@@ -20,6 +20,7 @@ from rest_framework_simplejwt import views as jwt_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('books/', include("books.urls")),
+    path('locations/', include("locations.urls")),
     path('authors/', include("authors.urls")),
     path('api-auth/', include("rest_framework.urls")),
     path('dj-rest-auth/', include('dj_rest_auth.urls')),
