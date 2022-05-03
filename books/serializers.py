@@ -46,7 +46,14 @@ class BookSerializer(serializers.ModelSerializer):
         author_data = data.pop("author")
         location_data = data.pop("locations")
 
-        book = Book(**data)
+        # book = Book(**data)
+        book = Book(
+            title=data["title"],
+            year_of_publication=data['year_of_publication'],
+            rating=data['rating'],
+            genre=data['genre'],
+            language=data['language'],
+        )
 
         if author_data:
             author, _created = Author.objects.get_or_create(**author_data)
