@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 
 from authors.models import Author
 from locations.models import Location
+from users.models import BooksUser
 
 GENRES = [
     ('Not classified', "This book can't be classified as a particular genre"),
@@ -50,7 +51,7 @@ class Book(models.Model):
         Location, blank=True, related_name="books")
 
     creator = models.ForeignKey(
-        User, related_name="books", null=True, on_delete=models.CASCADE)
+        BooksUser, related_name="books", null=True, on_delete=models.CASCADE)
 
     def __str__(self) -> str:
         return f"{self.title}"

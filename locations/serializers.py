@@ -9,5 +9,7 @@ class LocationSerializer(serializers.ModelSerializer):
         fields = "__all__"
 
     def update(self, location, data):
-        print(">>>>>>> location books", location.books)
-        pass
+        location.name = data.get("name", location.name)
+        location.save()
+
+        return location
