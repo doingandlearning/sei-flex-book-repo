@@ -33,6 +33,8 @@ class IsAuthorOrReadOnly(permissions.BasePermission):
 
 
 class IsSafeMethod(permissions.BasePermission):
+    message = 'Only save http methods allowed'
+
     def has_object_permission(self, request, view, obj):
         return request.method in permissions.SAFE_METHODS
 
@@ -45,9 +47,30 @@ class IsPutOrGetMethod(permissions.BasePermission):
 
 
 class IsAuthor(permissions.BasePermission):
+    message = 'You have to be the author in order to amend this object'
+
     def has_object_permission(self, request, view, obj):
         # if obj.creator == request.user:
         #     return True
         # else:
         #     return False
         return obj.creator == request.user
+
+
+class IsPremiumUser(permissions.BasePermission):
+    message = 'You have to be a premium user for this action'
+
+    def has_object_permission(self, request, view, obj):
+        return request.user.is_premium
+
+
+class IsAuthorAndPremiumUser(permissions.BasePermission):
+    message = 'You have to be the author of the book as well as premium user'
+
+    def has_object_permission(self, request, view, obj):
+        # 1. Check whether the request is either 'GET', 'HEAD' or 'OPTIONS'
+        if request.method in permissions.SAFE_METHODS:
+            return True
+
+        # 2. If not safe method:
+        return IsAuthor.has_object_permission(self, request, view, obj) | IsPremiumUser.has_object_permission(self, request, view, obj)

@@ -26,20 +26,20 @@ class BookSerializer(serializers.ModelSerializer):
         model = Book
         fields = "__all__"
 
-    def validate(self, attrs):
-        # add some custom validation
+    # def validate(self, attrs):
+    #     # add some custom validation
 
-        # 1. get the currently logged in user
-        # 2. check that the user is premium
+    #     # 1. get the currently logged in user
+    #     # 2. check that the user is premium
 
-        request = self.context.get("request")
-        if request and hasattr(request, "user"):
-            if request.user.is_premium == False:
-                raise serializers.ValidationError({
-                    "is_premium": "Only premium users can create and update books."
-                })
+    #     request = self.context.get("request")
+    #     if request and hasattr(request, "user"):
+    #         if not request.user.is_premium:
+    #             raise serializers.ValidationError({
+    #                 "is_premium": "Only premium users can create and update books."
+    #             })
 
-        return attrs
+    #     return attrs
 
     # data is already validated
     def create(self, data):
